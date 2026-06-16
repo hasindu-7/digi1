@@ -64,7 +64,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
 </head>
 <body>
 
-    <?php include 'header.php'; ?>
+    <?php include '../includes/header.php'; ?>
 
     <div class="admin-container">
         <div class="admin-header">
@@ -99,7 +99,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
         </div>
     </div>
 
-    <?php include 'footer.php'; ?>
+    <?php include '../includes/footer.php'; ?>
 
 </body>
 </html>

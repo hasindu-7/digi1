@@ -123,7 +123,7 @@ $result = $conn->query("SELECT id, full_name, email, phone_number, role, created
 </head>
 <body>
 
-    <?php include 'header.php'; ?>
+    <?php include '../includes/header.php'; ?>
 
     <div class="admin-container">
         <h2>👥 Manage Users</h2>
@@ -180,7 +180,7 @@ $result = $conn->query("SELECT id, full_name, email, phone_number, role, created
 
     </div>
 
-    <?php include 'footer.php'; ?>
+    <?php include '../includes/footer.php'; ?>
 
 </body>
 </html>

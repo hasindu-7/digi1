@@ -73,9 +73,11 @@
     }
     ?>
 </div>
-</div>
 
 <button class="next">❯</button>
+
+</div>
+
 
 </div>
 </section> 

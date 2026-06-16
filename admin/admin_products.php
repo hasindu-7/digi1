@@ -109,7 +109,7 @@ $result = $conn->query("SELECT * FROM products ORDER BY created_at DESC");
 </head>
 <body>
 
-    <?php include 'header.php'; ?>
+    <?php include '../includes/header.php'; ?>
 
     <div class="admin-container">
         <h2>📦 Manage Products</h2>
@@ -172,7 +172,7 @@ $result = $conn->query("SELECT * FROM products ORDER BY created_at DESC");
 
     </div>
 
-    <?php include 'footer.php'; ?>
+    <?php include '../includes/footer.php'; ?>
 
 </body>
 </html>

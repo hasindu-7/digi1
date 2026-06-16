@@ -84,7 +84,7 @@ $result = $conn->query($sql);
 </head>
 <body>
 
-    <?php include 'header.php'; ?>
+    <?php include '../includes/header.php'; ?>
 
     <div class="admin-container">
         <h2>📦 Manage Orders</h2>
@@ -138,7 +138,7 @@ $result = $conn->query($sql);
 
     </div>
 
-    <?php include 'footer.php'; ?>
+    <?php include '../includes/footer.php'; ?>
 
 </body>
 </html>
