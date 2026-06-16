@@ -23,3 +23,96 @@ button {
     border: none;
     cursor: pointer;
 }
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablet and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 30px 25px;
+        margin: 30px 20px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    input {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px;
+        font-size: 1rem;
+        margin: 12px auto;
+    }
+    
+    button {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 20px;
+        font-size: 1rem;
+        margin: 15px auto;
+    }
+    
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    
+    p {
+        font-size: 0.95rem;
+        margin-top: 15px;
+    }
+    
+    a {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .login-box {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 20px 15px;
+        margin: 20px 10px;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    
+    input {
+        width: 100%;
+        max-width: none;
+        padding: 14px 12px;
+        font-size: 1rem;
+        margin: 10px 0;
+        border-radius: 6px;
+    }
+    
+    input::placeholder {
+        font-size: 0.9rem;
+    }
+    
+    button {
+        width: 100%;
+        max-width: none;
+        padding: 14px 15px;
+        font-size: 0.95rem;
+        margin: 12px 0 15px;
+        background-color: #3498db;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    
+    button:active {
+        transform: scale(0.98);
+    }
+    
+    p {
+        font-size: 0.85rem;
+        margin-top: 12px;
+    }
+}

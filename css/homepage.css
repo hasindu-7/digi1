@@ -298,6 +298,146 @@ footer {
     transform: translateY(0);
 }
 
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablet and below (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 120px 20px 60px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    
+    .hero p {
+        font-size: 1em;
+    }
+    
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+    
+    h2 {
+        font-size: 1.8em;
+        margin: 40px 20px 20px;
+    }
+    
+    .slider-container {
+        width: 95%;
+    }
+    
+    .product {
+        min-width: 200px;
+        margin: 15px;
+        padding: 15px;
+    }
+    
+    .product img {
+        width: 100px;
+    }
+    
+    .add-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .prev, .next {
+        padding: 8px;
+        font-size: 1.2rem;
+    }
+    
+    .features {
+        flex-direction: column;
+        gap: 15px;
+        margin: 30px 20px;
+    }
+    
+    .features > div {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .nav-center {
+        display: none;
+    }
+    
+    .search-bar {
+        display: none;
+    }
+    
+    .hero {
+        padding: 100px 15px 40px;
+        min-height: auto;
+    }
+    
+    .hero h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+    
+    .hero p {
+        font-size: 0.95rem;
+    }
+    
+    .cta-btn {
+        padding: 12px 20px;
+        width: 100%;
+        max-width: 300px;
+        font-size: 0.9rem;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+        margin: 30px 15px;
+    }
+    
+    .slider-container {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .products {
+        width: 100%;
+    }
+    
+    .product {
+        min-width: 160px;
+        margin: 12px;
+        padding: 12px;
+    }
+    
+    .product img {
+        width: 80px;
+    }
+    
+    .add-btn {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .prev, .next {
+        padding: 6px 10px;
+        font-size: 1rem;
+    }
+    
+    .features {
+        gap: 10px;
+        margin: 20px 15px;
+    }
+    
+    .features > div {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+
 .login-button {
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(10px);

@@ -64,3 +64,109 @@ h2 {
     background: #2ecc71;
     transform: translateY(-2px);
 }
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablet and below (max-width: 768px) */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.6em;
+        margin: 30px 20px 20px;
+        text-align: center;
+    }
+    
+    .cart-table {
+        width: 90%;
+        margin: 0 auto 30px;
+        font-size: 0.9rem;
+    }
+    
+    .cart-table th, .cart-table td {
+        padding: 12px;
+    }
+    
+    .product-info img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .cart-summary {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .checkout-btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.3em;
+        margin: 20px 15px;
+    }
+    
+    .cart-table {
+        width: 100%;
+        margin: 0 15px 20px;
+        display: block;
+        overflow-x: auto;
+        font-size: 0.85rem;
+    }
+    
+    .cart-table thead {
+        display: none;
+    }
+    
+    .cart-table tr {
+        display: block;
+        margin-bottom: 15px;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .cart-table td {
+        display: block;
+        padding: 8px 12px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .cart-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--accent-color);
+        display: inline-block;
+        width: 80px;
+    }
+    
+    .product-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .product-info img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .cart-summary {
+        width: 100%;
+        margin: 0 15px;
+        text-align: center;
+    }
+    
+    .checkout-btn {
+        width: 100%;
+        padding: 14px 15px;
+        font-size: 0.9rem;
+        max-width: none;
+    }
+}

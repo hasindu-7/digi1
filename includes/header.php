@@ -2,7 +2,8 @@
     <div class="logo">
         <a href="../pages/homepage.php">Lanka DigiMart</a>
     </div>
-<nav class="main-nav">
+    <button class="menu-toggle" id="menuToggle">☰</button>
+<nav class="main-nav" id="mainNav">
         <ul>
             <li><a href="../pages/homepage.php">Home</a></li>
             <li><a href="../pages/shop.php?category=all">Shop All</a></li>
