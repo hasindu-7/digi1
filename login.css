@@ -1,0 +1,33 @@
+body {
+    background: url('homepage.jpeg') no-repeat center/cover;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+input {
+    display: block;
+    width: 250px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}

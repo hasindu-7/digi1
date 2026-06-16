@@ -1,0 +1,39 @@
+body {
+    background: url('homepage.jpeg') no-repeat center/cover;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-box {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+input, textarea {
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-family: inherit;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical; /* Allows user to drag it taller if they want */
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
