@@ -48,6 +48,7 @@ $result = $conn->query("SELECT * FROM faqs ORDER BY created_at DESC");
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage FAQs - Lanka DigiMart</title>
     <link rel="stylesheet" href="../css/global.css">
     <style>

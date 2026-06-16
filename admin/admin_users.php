@@ -59,6 +59,7 @@ $result = $conn->query("SELECT id, full_name, email, phone_number, role, created
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Users - Lanka DigiMart</title>
     <link rel="stylesheet" href="../css/global.css">
     <style>

@@ -25,32 +25,43 @@ const cartCount = document.getElementById("cartCount");
 
 
 if (slider && nextBtn && prevBtn) {
-    const itemWidth = 280;
+    function getItemWidth() {
+        if (!slider.children.length) return 280;
+        const style = window.getComputedStyle(slider.children[0]);
+        return slider.children[0].offsetWidth + parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+    }
+
     let index = 0;
 
     function canSlide() {
         const visibleWidth = slider.parentElement.offsetWidth;
-        const visibleItems = Math.floor(visibleWidth / itemWidth);
+        const visibleItems = Math.floor(visibleWidth / getItemWidth());
         return slider.children.length > visibleItems;
     }
 
     function move(step) {
-    if (!canSlide()) return;
+        if (!canSlide()) return;
 
-    const total = slider.children.length;
+        const total = slider.children.length;
+        const visibleWidth = slider.parentElement.offsetWidth;
+        const currentItemWidth = getItemWidth();
+        const visibleItems = Math.floor(visibleWidth / currentItemWidth);
 
-    const visibleWidth = slider.parentElement.offsetWidth;
-    const visibleItems = Math.floor(visibleWidth / itemWidth);
+        let maxIndex = total - visibleItems;
+        if (maxIndex < 0) maxIndex = 0;
 
-    const maxIndex = total - visibleItems;
+        index += step;
 
-    index += step;
+        if (index < 0) index = 0;
+        if (index > maxIndex) index = maxIndex;
 
-    if (index < 0) index = 0;
-    if (index > maxIndex) index = maxIndex;
-
-    slider.style.transform = `translateX(-${index * itemWidth}px)`;
+        slider.style.transform = `translateX(-${index * currentItemWidth}px)`;
     }
+    
+    window.addEventListener("resize", () => {
+        index = 0;
+        slider.style.transform = `translateX(0px)`;
+    });
 
     nextBtn.addEventListener("click", () => move(1));
     prevBtn.addEventListener("click", () => move(-1));
@@ -98,31 +109,4 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", revealOnView, { passive: true });
 });
 
-/* --- MOBILE MENU TOGGLE --- */
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.getElementById("menuToggle");
-    const mainNav = document.getElementById("mainNav");
-    
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener("click", (e) => {
-            e.stopPropagation();
-            mainNav.classList.toggle("active");
-        });
-        
-        // Close menu when clicking on a link
-        const navLinks = mainNav.querySelectorAll("a");
-        navLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                mainNav.classList.remove("active");
-            });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener("click", (e) => {
-            if (!e.target.closest(".main-header")) {
-                mainNav.classList.remove("active");
-            }
-        });
-    }
-});
 

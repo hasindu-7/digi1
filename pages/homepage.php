@@ -51,7 +51,7 @@
             
             // Wrap the icon in a link to the product page
             echo '<a href="product.php?id=' . $productId . '" style="text-decoration: none;">';
-            echo '<div style="width: 150px; height: 150px; background-color: var(--bg-surface-hover); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 50px; margin: 0 auto 15px auto;">';
+            echo '<div class="product-icon">';
             echo $icon;
             echo '</div>';
             echo '</a>';

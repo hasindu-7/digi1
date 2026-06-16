@@ -5,6 +5,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart - Lanka DigiMart</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/cart.css">
@@ -35,15 +36,15 @@ session_start();
                         $total += $item['price']; // Add to the total cost
                         
                         echo '<tr>';
-                        echo '<td>';
+                        echo '<td data-label="Product">';
                         echo '<div class="product-info">';
                         echo '<span style="font-size: 24px;">' . htmlspecialchars($item['icon']) . '</span>';
                         echo '<span>' . htmlspecialchars($item['title']) . '</span>';
                         echo '</div>';
                         echo '</td>';
-                        echo '<td>LKR ' . number_format($item['price'], 2) . '</td>';
+                        echo '<td data-label="Price">LKR ' . number_format($item['price'], 2) . '</td>';
                         // A link to remove the item
-                        echo '<td><a href="cart_remove.php?id=' . $id . '" style="color: #e74c3c;">Remove</a></td>';
+                        echo '<td data-label="Action"><a href="cart_remove.php?id=' . $id . '" style="color: #e74c3c;">Remove</a></td>';
                         echo '</tr>';
                     }
                 } else {

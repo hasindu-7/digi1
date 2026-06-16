@@ -31,3 +31,30 @@
         ?>
     </div>
 </header>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+    
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            mainNav.classList.toggle("active");
+        });
+        
+        const navLinks = mainNav.querySelectorAll("a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mainNav.classList.remove("active");
+            });
+        });
+        
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".main-header")) {
+                mainNav.classList.remove("active");
+            }
+        });
+    }
+});
+</script>

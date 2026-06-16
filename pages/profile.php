@@ -29,6 +29,7 @@ $orders_result = $order_stmt->get_result();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile - Lanka DigiMart</title>
     <link rel="stylesheet" href="../css/global.css">
     <style>
