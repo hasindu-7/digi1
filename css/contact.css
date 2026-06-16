@@ -1,11 +1,3 @@
-body {
-    background: url('homepage.jpeg') no-repeat center/cover;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 .contact-box {
     background: rgba(255,255,255,0.1);

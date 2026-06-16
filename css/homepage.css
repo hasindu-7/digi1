@@ -1,25 +1,8 @@
-/* 🔥 RESET */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* 🔥 BODY BACKGROUND */
-body {
-    font-family: 'Segoe UI', sans-serif;
-
-    background: url('homepage.jpeg') no-repeat center top/cover;
-    color: white;
-}
-
-/* 🔥 DARK OVERLAY */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: -1;
 }
 
 /* LOGO */
